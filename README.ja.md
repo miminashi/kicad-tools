@@ -125,47 +125,47 @@ export SCHEMATIC_CACHE_DIR=$HOME/.kicad-tools/cache/schematics
 
 
 
-## Usage
+## 使い方
 
-### Generating build artifacts
+### ビルドアーティファクトの生成
 
-By default, all build artifacts are created in a subdirectory of the 'out' directory of your project.
-To customize the name of the subdirectory artifacts are created in, set the `BOARD_SNAPSHOT_LABEL` environment variable.
+デフォルトでは、すべてのビルドアーティファクトはプロジェクトの'out'ディレクトリのサブディレクトリに作成されます。
+アーティファクトが作成されるサブディレクトリの名前をカスタマイズするには、`BOARD_SNAPSHOT_LABEL` 環境変数を設定します。
 
-To customize the output directory, set the `OUTPUT_PATH` environment variable.
+出力ディレクトリをカスタマイズするには、OUTPUT_PATH環境変数を設定します。
 
-To generate a whole package of fabrication outputs, 
+製造出力のパッケージ全体を生成するには、
 
 ```
 $ make fabrication-outputs
 ```
 
-To generate SVG schematics
+回路図のSVG画像を生成するには、
 ```
 $ make schematic-svg
 ```
 
-To generate PDF schematics
+回路図のPDFを生成するには、
 ```
 $ make schematic-pdf
 ```
 
-To generate gerbers, pdfs, dxfs, and svgs of your layout
+基板レイアウトのガーバー、PDF、DXF、およびSVGを生成するには、
 ``` 
 $ make gerbers
 ```
 
-To generate a CSV bom
+SVG形式のBOMを製造するには、
 ```
 $ make bom
 ```
 
-To generate an HTML interactive BOM
+HTML形式のインタラクティブなBOMを生成するには、
 ```
 $ make interactive-bom
 ```
 
-If you need to log into the docker instance to debug something, there's a makefile target for that, too
+何かをデバッグするためにdockerインスタンスにログインする必要がある場合、そのためのmakefileターゲットもあります:
 
 ```
 $ make docker-shell
